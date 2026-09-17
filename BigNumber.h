@@ -129,7 +129,7 @@ inline std::string bigPowString(std::string baseStr, std::string expStr){
 inline std::string factorial(ull n){
     if (n == 0 || n == 1) return "1";
     std::string result = "1";
-    for (int i = 2; i <= n; ++i) {
+    for (ull i = 2; i <= n; ++i) {
         result = multiplyStrings(result, std::to_string(i));
     }
     return result;
