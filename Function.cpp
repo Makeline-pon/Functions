@@ -1350,7 +1350,7 @@ int Function::compareStrings(Function& func, const std::string& a, const std::st
 	void Function::Fibonacci(ull id){
 		if(id >= 1) f.push_back("1");
 		if(id >= 2) f.push_back("1");
-		for(int i = 2;i < id;i++){
+		for(ull i = 2;i < id;i++){
 			stp++;
 			printf("<< ");
 			std::string fs = ifss(stp);
@@ -1358,7 +1358,7 @@ int Function::compareStrings(Function& func, const std::string& a, const std::st
 			printf("%s  %s  %s", fs.c_str(), wco[re].c_str(), eco[re].c_str());
 			std::string nextVal = addStrings(f[i - 1], f[i - 2]);
             f.push_back(nextVal);
-			printf(" : f[%d] -> %s\n",i,f[i].c_str());
+			printf(" : f[%llu] -> %s\n", (unsigned long long)i, f[i].c_str());
 		}
 	}
 	std::string Function::sieve_euler(std::string n){
