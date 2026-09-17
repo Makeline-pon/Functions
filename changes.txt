@@ -1,11 +1,13 @@
-v1.5.0 :
+v0.1.0 :
     - basic frame test (removed now)
-v1.5.1 :  
+
+v0.2.0 :
     - 1 new function
-    - added file readme.txt
+    - added file README.txt
     - added file changes.txt
     - added debug mode
-v1.5.2 :
+
+v1.0.0 :
     - Buchholz OCF Extended (Omega, I_rec, M_rec, Pi1, Pi2)
     - Fixed omega^psi_0(1) = omega^omega (power method supports infinite exponents)
     - Fixed epsilon_0 + omega^2 absorption (add method implements ordinal absorption)
