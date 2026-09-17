@@ -88,7 +88,7 @@ D:\mingw64\bin\g++.exe -std=c++26 -g main.cpp Function.cpp -o Function.exe -stat
 ### Debug Mode
 Select ‌`-1` in the menu to toggle debug mode, which outputs detailed computation logs for tracing ordinal calculations.
 ### Version
-**v1.5.2**
+**v1.0.0**
 ### License
 This project is licensed under the ‌MIT License‌ — see the LICENSE.txt file for details.
 > Copyright (c) 2026 Makeline-pon
