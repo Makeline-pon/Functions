@@ -73,10 +73,10 @@ using OrdPtr = std::shared_ptr<BuchholzOrdinal>;
         std::string toString() const;
     };
 
-    static Term makeLargeCardinalTerm(LargeCardinalType lc) {
+    [[maybe_unused]] static Term makeLargeCardinalTerm(LargeCardinalType lc) {
         return Term("1", 0, nullptr, lc, 0);
     }
-    static Term makeReflectionTerm(int level, OrdPtr alpha = nullptr, int order = 1) {
+    [[maybe_unused]] static Term makeReflectionTerm(int level, OrdPtr alpha = nullptr, int order = 1) {
         Term t("1", 0, alpha, LargeCardinalType::OMEGA, level);
         t.reflectionOrder = order;
         return t;
@@ -278,10 +278,8 @@ using OrdPtr = std::shared_ptr<BuchholzOrdinal>;
                 if (psiArg) {
                     // Check if alpha is a finite number
                     bool allFinite = true;
-                    bool zero = true;
                     for (const auto& t : psiArg->terms) {
                         if (t.v != -1) { allFinite = false; break; }
-                        if (t.getCoeff() > 0) zero = false;
                     }
                     int finiteVal = psiArg->constant_coefficient;
                     if (allFinite && !psiArg->terms.empty()) {
@@ -1553,32 +1551,26 @@ using OrdPtr = std::shared_ptr<BuchholzOrdinal>;
 		        if (isOmega) {
 		            lc = LargeCardinalType::UNCOUNTABLE;
 		            base = "\u03A9";
-		            bool hasIndex = false;
 		            int idx = 1; // Default: Omega_1 = smallest uncountable cardinal				
 				if (omegaLen < s.length() && s[omegaLen] == '[') {
 					size_t end = s.find(']', omegaLen);
 					if (end != std::string::npos) {
 						std::string idxStr = s.substr(omegaLen + 1, end - omegaLen - 1);
 						try { idx = stoi(idxStr); } catch (...) { idx = 1; }
-						hasIndex = true;
 					}
 				} else if (omegaLen < s.length() && s[omegaLen] == '_') {
 					std::string idxStr = s.substr(omegaLen + 1);
 					if (idxStr == "omega" || idxStr == "ω") {
 						idx = 0;
-						hasIndex = true;
 					} else {
 						try { idx = stoi(idxStr); } catch (...) { idx = 1; }
-						hasIndex = true;
 					}
 				} else if (omegaLen < s.length() && isdigit(s[omegaLen])) {
 					std::string idxStr = s.substr(omegaLen);
 					try { idx = stoi(idxStr); } catch (...) { idx = 1; }
-					hasIndex = true;
 				} else {
 					// Bare "Omega" or "Ω" without index defaults to Omega_1
 					idx = 1;
-					hasIndex = true;
 				}
 
 
@@ -2054,13 +2046,9 @@ using OrdPtr = std::shared_ptr<BuchholzOrdinal>;
                 
                 // Check if alpha contains omega (v=0, isCountableOmega) - this gives epsilon numbers
                 bool containsOmega = false;
-                bool containsOnlyOmega = true;
                 for (const auto& t : alpha.terms) {
                     if (t.v == 0 && t.isCountableOmega) {
                         containsOmega = true;
-                    }
-                    if (!t.isCountableOmega && !t.isFinite()) {
-                        containsOnlyOmega = false;
                     }
                 }
                 
