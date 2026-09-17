@@ -1,0 +1,15 @@
+v1.5.0 :
+    - basic frame test (removed now)
+v1.5.1 :  
+    - 1 new function
+    - added file readme.txt
+    - added file changes.txt
+    - added debug mode
+v1.5.2 :
+    - Buchholz OCF Extended (Omega, I_rec, M_rec, Pi1, Pi2)
+    - Fixed omega^psi_0(1) = omega^omega (power method supports infinite exponents)
+    - Fixed epsilon_0 + omega^2 absorption (add method implements ordinal absorption)
+    - Fixed psi_0(I_rec) + psi_0(M_rec) = psi_0(M_rec) (large ordinal absorbs smaller)
+    - Fixed isInH(psi_1(0), nu=0) = false (H-set membership check)
+    - Added 108 verification tests for OCF system
+    - Added fundamental sequence tests (epsilon_0, zeta_0, omega^omega)
