@@ -1,9 +1,9 @@
 # Functions - Math & Buchholz OCF Tool
 
-[![C++](https://img.shields.io/badge/C++-26-blue.svg)](https://en.cppreference.com/w/cpp/26)
+[![C++](https://img.shields.io/badge/C++-17-blue.svg)](https://en.cppreference.com/w/cpp/17)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.txt)
-[![Version](https://img.shields.io/badge/version-v1.5.2-orange.svg)](changes.txt)
+[![Version](https://img.shields.io/badge/version-v1.0.0-orange.svg)](changes.txt)
 
 High-precision mathematical computations and the **Buchholz Ordinal Collapsing Function (OCF)** implemented in C++. Combines classic number theory functions with advanced ordinal theory analysis, supporting calculations from basic combinatorics to large countable ordinal systems.
 
@@ -62,7 +62,7 @@ High-precision mathematical computations and the **Buchholz Ordinal Collapsing F
 ## Getting Started
 ### Prerequisites
 * **Platform**: Windows (requires `<windows.h>`)
-* **Compiler**: MinGW-w64 with C++26 support
+* **Compiler**: MinGW-w64 with C++17 support
 * **Encoding**: UTF-8
 ### Building
 #### Quick Build
