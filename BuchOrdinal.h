@@ -1,3 +1,11 @@
+// BuchOrdinal.h - Buchholz Ordinal Collapsing Function (OCF) implementation
+// Implements:
+//   - Ordinal arithmetic (addition, multiplication, exponentiation)
+//   - Psi collapsing functions: psi_v(alpha)
+//   - Large cardinal support (I_rec, M_rec, Omega hierarchy)
+//   - Fundamental sequences for limit ordinals
+//   - Normal form conversion and ordinal comparison
+
 #pragma once
 #include <string>
 #include <vector>
@@ -11,24 +19,28 @@
 
 class BuchholzOrdinal;
 using OrdPtr = std::shared_ptr<BuchholzOrdinal>;
-    enum class LargeCardinalType {
-        OMEGA = 0,
-        UNCOUNTABLE,
-        RECURSIVE_INACCESSIBLE,
-        RECURSIVE_MALO
-    };
 
-    static int getLargeCardinalLevel(LargeCardinalType lc) {
-        switch (lc) {
-            case LargeCardinalType::OMEGA: return 0;
-            case LargeCardinalType::UNCOUNTABLE: return 1;
-            case LargeCardinalType::RECURSIVE_INACCESSIBLE: return 2;
-            case LargeCardinalType::RECURSIVE_MALO: return 3;
-            default: return -1;
-        }
+// Types of large cardinals in the system
+enum class LargeCardinalType {
+    OMEGA = 0,                  // Countable omega (ω)
+    UNCOUNTABLE,                // Uncountable cardinals (Ω, Ω_1, etc.)
+    RECURSIVE_INACCESSIBLE,     // I_rec - recursively inaccessible ordinal
+    RECURSIVE_MALO             // M_rec - recursively Mahlo ordinal
+};
+
+// Return the hierarchy level of a large cardinal type
+static int getLargeCardinalLevel(LargeCardinalType lc) {
+    switch (lc) {
+        case LargeCardinalType::OMEGA: return 0;
+        case LargeCardinalType::UNCOUNTABLE: return 1;
+        case LargeCardinalType::RECURSIVE_INACCESSIBLE: return 2;
+        case LargeCardinalType::RECURSIVE_MALO: return 3;
+        default: return -1;
     }
+}
 
-    static std::string getLargeCardinalName(LargeCardinalType lc) {
+// Return the display name of a large cardinal type
+static std::string getLargeCardinalName(LargeCardinalType lc) {
         switch (lc) {
             case LargeCardinalType::OMEGA: return "omega";
             case LargeCardinalType::UNCOUNTABLE: return "\u03A9";
