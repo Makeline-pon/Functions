@@ -5,13 +5,13 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.txt)
 [![Version](https://img.shields.io/badge/version-v1.5.2-orange.svg)](changes.txt)
 
-High-precision mathematical computations and the &zwnj;**Buchholz Ordinal Collapsing Function (OCF)**&zwnj; implemented in C++. Combines classic number theory functions with advanced ordinal theory analysis, supporting calculations from basic combinatorics to large countable ordinal systems.
+High-precision mathematical computations and the **Buchholz Ordinal Collapsing Function (OCF)** implemented in C++. Combines classic number theory functions with advanced ordinal theory analysis, supporting calculations from basic combinatorics to large countable ordinal systems.
 
 ## Features
 
 ### 1. Ackermann Function — A(m, n)
 
-* Classic computable but &zwnj;**not primitive recursive**&zwnj; function
+* Classic computable but **not primitive recursive** function
 * Supports large inputs, results output as arbitrary-precision strings
 
 ### 2. Fibonacci Sequence — f[i]
@@ -31,11 +31,11 @@ High-precision mathematical computations and the &zwnj;**Buchholz Ordinal Collap
 
 ### 5. Buchholz OCF — Standard Mode
 
-* &zwnj;**Maximum strength**&zwnj;: Buchholz Ordinal (BO) = ψ₀(Ωω</sub>)
+* **Maximum strength**: Buchholz Ordinal (BO) = ψ₀(Ωω</sub>)
 * Supported ordinal constants:
-  * &zwnj;**ω (omega)**&zwnj;: Countable limit ordinal (ℵ₀)
-  * &zwnj;**Ω (Omega)**&zwnj;: First uncountable cardinal (ℵ₁)
-  * &zwnj;**Ω[N]**&zwnj;: *N*-th uncountable cardinal in the Buchholz hierarchy
+  * **ω (omega)**: Countable limit ordinal (ℵ₀)
+  * **Ω (Omega)**: First uncountable cardinal (ℵ₁)
+  * **Ω[N]**: *N*-th uncountable cardinal in the Buchholz hierarchy
 * Input format: `psi_v(alpha)`
 * Examples: `psi_0(omega)`, `psi_0(Omega)`, `psi_0(Ω_2)`
 
@@ -43,16 +43,16 @@ High-precision mathematical computations and the &zwnj;**Buchholz Ordinal Collap
 
 * Extends beyond the basic Buchholz ordinal system
 * Supported large cardinal constants:
-  * &zwnj;**I_rec**&zwnj;: Smallest recursively inaccessible ordinal (KPI strength)
-  * &zwnj;**M_rec**&zwnj;: Smallest recursively Mahlo ordinal (KPM strength)
+  * **I_rec**: Smallest recursively inaccessible ordinal (KPI strength)
+  * **M_rec**: Smallest recursively Mahlo ordinal (KPM strength)
 * Reflection operators:
-  * &zwnj;**Pi1(n)**&zwnj;: *n*-th admissible ordinal (KP set theory models)
-  * &zwnj;**Pi2(n)**&zwnj;: *n*-th recursively inaccessible ordinal
-* &zwnj;**Note**&zwnj;: True large cardinals (inaccessible and above) are excluded
+  * **Pi1(n)**: *n*-th admissible ordinal (KP set theory models)
+  * **Pi2(n)**: *n*-th recursively inaccessible ordinal
+* **Note**: True large cardinals (inaccessible and above) are excluded
 
 ### 7. Buchholz OCF — Value Verification
 
-* &zwnj;**100+ built-in verification test cases**&zwnj;
+* **100+ built-in verification test cases**
 * Validates basic ordinal values:
   * ψ₀(0) = 1
   * ψ₀(1) = ω
@@ -61,13 +61,13 @@ High-precision mathematical computations and the &zwnj;**Buchholz Ordinal Collap
 
 ## Getting Started
 ### Prerequisites
-* &zwnj;**Platform**&zwnj;: Windows (requires `<windows.h>`)
-* &zwnj;**Compiler**&zwnj;: MinGW-w64 with C++26 support
-* &zwnj;**Encoding**&zwnj;: UTF-8
+* **Platform**: Windows (requires `<windows.h>`)
+* **Compiler**: MinGW-w64 with C++26 support
+* **Encoding**: UTF-8
 ### Building
 #### Quick Build
 Double-click `build.bat` — it compiles and runs the program automatically.
-#### Manual Build
+#### Manual Build (Mind the path)
 ```bash
 D:\mingw64\bin\g++.exe -std=c++26 -g main.cpp Function.cpp -o Function.exe -static-libgcc -static-libstdc++
 ```
