@@ -1,3 +1,7 @@
+// BigNumber.h - Arbitrary precision integer arithmetic utilities
+// Provides: add, subtract, multiply, divide, power, factorial operations
+// All numbers are represented as decimal strings to support arbitrarily large values
+
 #pragma once
 #include <string>
 #include <vector>
