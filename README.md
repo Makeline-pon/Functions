@@ -3,7 +3,7 @@
 [![C++](https://img.shields.io/badge/C++-17-blue.svg)](https://en.cppreference.com/w/cpp/17)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.txt)
-[![Version](https://img.shields.io/badge/version-v1.0.0-orange.svg)](changes.txt)
+[![Version](https://img.shields.io/badge/version-v1.0.1-orange.svg)](changes.txt)
 
 High-precision mathematical computations and the **Buchholz Ordinal Collapsing Function (OCF)** implemented in C++. Combines classic number theory functions with advanced ordinal theory analysis, supporting calculations from basic combinatorics to large countable ordinal systems.
 
@@ -88,7 +88,7 @@ D:\mingw64\bin\g++.exe -std=c++26 -g main.cpp Function.cpp -o Function.exe -stat
 ### Debug Mode
 Select ‌`-1` in the menu to toggle debug mode, which outputs detailed computation logs for tracing ordinal calculations.
 ### Version
-**v1.0.0**
+**v1.0.1**
 ### License
 This project is licensed under the ‌MIT License‌ — see the LICENSE.txt file for details.
 > Copyright (c) 2026 Makeline-pon
