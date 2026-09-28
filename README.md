@@ -1,9 +1,9 @@
 # Functions - Math & Buchholz OCF Tool
 
 [![C++](https://img.shields.io/badge/C++-17-blue.svg)](https://en.cppreference.com/w/cpp/17)
-[![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
+[![Platform](https://img.shields.io/badge/Platform-Windows/Linux/macOS-lightgrey.svg)](https://www.microsoft.com/windows)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.txt)
-[![Version](https://img.shields.io/badge/version-v1.0.1-orange.svg)](changes.txt)
+[![Version](https://img.shields.io/badge/version-v1.0.0-orange.svg)](changes.md)
 
 High-precision mathematical computations and the **Buchholz Ordinal Collapsing Function (OCF)** implemented in C++. Combines classic number theory functions with advanced ordinal theory analysis, supporting calculations from basic combinatorics to large countable ordinal systems.
 
@@ -58,18 +58,22 @@ High-precision mathematical computations and the **Buchholz Ordinal Collapsing F
   * ψ₀(1) = ω
   * ψ₀(Ω) = ε₀
 * Validates advanced ordinals: ζ₀, Γ₀, BHO, and more
+* **TEST 52/77 pending — see changes.md**
 
 ## Getting Started
 ### Prerequisites
-* **Platform**: Windows (requires `<windows.h>`)
-* **Compiler**: MinGW-w64 with C++17 support
+*   **Core Library**: Cross-platform (C++17 compatible). The algorithms in `Function.cpp`, `BigNumber.h`, and `BuchOrdinal.h` do not depend on any OS-specific APIs.
+*   **Default Entry Point (`main.cpp`)**: Currently requires ;**Windows** (`<windows.h>`) for UTF-8 console configuration.
+*   **Compiler**:
+    *   Windows: MinGW-w64 with C++17 support.
+    *   Linux/macOS: GCC or Clang with C++17 support (requires custom `main.cpp`).
 * **Encoding**: UTF-8
 ### Building
 #### Quick Build
 Double-click `build.bat` — it compiles and runs the program automatically.
 #### Manual Build (Mind the path)
 ```bash
-D:\mingw64\bin\g++.exe -std=c++26 -g main.cpp Function.cpp -o Function.exe -static-libgcc -static-libstdc++
+D:\mingw64\bin\g++.exe -std=c++17 -g main.cpp Function.cpp -o Function.exe -static-libgcc -static-libstdc++
 ```
 #### Running
 ```bash
