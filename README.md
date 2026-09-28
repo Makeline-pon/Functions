@@ -69,26 +69,39 @@ High-precision mathematical computations and the **Buchholz Ordinal Collapsing F
     *   Linux/macOS: GCC or Clang with C++17 support (requires custom `main.cpp`).
 * **Encoding**: UTF-8
 ### Building
-#### Quick Build
+#### [Windows] Quick Build
 Double-click `build.bat` — it compiles and runs the program automatically.
-#### Manual Build (Mind the path)
+#### [Windows] Manual Build (Mind the path)
 ```bash
 D:\mingw64\bin\g++.exe -std=c++17 -g main.cpp Function.cpp -o Function.exe -static-libgcc -static-libstdc++
 ```
+#### [Linux / macOS] Custom Build
+Since the default `main.cpp` depends on Windows APIs, you must provide your own entry point (e.g. `main_unix.cpp`) that handles standard I/O without `<windows.h>`. Then compile the core sources:
+```bash
+g++ -std=c++17 main_unix.cpp Function.cpp -o Function
+```
+> Note: The core logic is fully portable. Only the UI/Console handling in `main.cpp` is platform-specific.
 #### Running
 ```bash
-.\Function.exe
+.\Function.exe   # Windows
+.\Function       # Linux/macOS
 ```
 ### Project Structure
 ```text
-├── main.cpp          # Entry point, UTF-8 console setup
-├── Function.cpp      # Core function implementations
-├── Function.h        # Function class declarations
-├── BigNumber.h       # Arbitrary-precision arithmetic library
-├── BuchOrdinal.h     # Buchholz OCF implementation
-├── build.bat         # Quick build & run script
-└── LICENSE.txt       # MIT License
+├── main.cpp           # Entry point, UTF-8 console setup (Windows)
+├── Function_cpp       # Core function implementations
+├── Function.h         # Function class declarations
+├── Function_fwd.h     # Forward declarations / shared types
+├── BigNumber.h        # Arbitrary-precision arithmetic library
+├── BuchOrdinal_h      # Buchholz OCF implementation
+├── build.bat          # Quick build & run script
+├── push_to_github.bat # Helper: push changes to GitHub
+├── changes.md         # Changelog / history
+├── changed_files.md   # Records of file-level changes
+├── .gitignore         # Git ignore rules
+└── .gitattributes     # Git line-ending / attribute rules
 ```
+
 ### Debug Mode
 Select ‌`-1` in the menu to toggle debug mode, which outputs detailed computation logs for tracing ordinal calculations.
 ### Version
