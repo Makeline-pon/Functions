@@ -63,7 +63,7 @@ High-precision mathematical computations and the **Buchholz Ordinal Collapsing F
 ## Getting Started
 ### Prerequisites
 *   **Core Library**: Cross-platform (C++17 compatible). The algorithms in `Function.cpp`, `BigNumber.h`, and `BuchOrdinal.h` do not depend on any OS-specific APIs.
-*   **Default Entry Point (`main.cpp`)**: Currently requires ;**Windows** (`<windows.h>`) for UTF-8 console configuration.
+*   **Default Entry Point (`main.cpp`)**: Currently requires **Windows** (`<windows.h>`) for UTF-8 console configuration.
 *   **Compiler**:
     *   Windows: MinGW-w64 with C++17 support.
     *   Linux/macOS: GCC or Clang with C++17 support (requires custom `main.cpp`).
